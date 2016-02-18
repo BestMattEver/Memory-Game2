@@ -1,0 +1,78 @@
+section {
+  /*animation: title_hop 1s infinite alternate;*/
+  animation: title_thang 1s infinite alternate;
+  text-align: center;
+  margin-top: 10%;
+  font-family: sans-serif;
+  font-size: 30px;
+  color:#ffffff;
+}
+
+
+
+h1{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
+  color: #ffffff;
+}
+
+body{
+  animation: color_shift 3s infinite alternate;
+
+  /* background:  #3F51B5;
+  animation-name: color_shift;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;*/
+}
+
+@keyframes color_shift{
+  0% {background: #5eb4b1}
+  100% {background: #3F51B5}
+}
+/*
+@keyframes title_hop{
+  0% {transform: translatey(0px)}
+  100% {transform: translatey(-20px)}
+}*/
+
+@keyframes title_thang{
+  0%{transform: rotatez(0deg) translatey(0px);}
+  100%{transform: rotatez(-3deg) translatey(-25px);}
+}
+
+.box1{
+  padding-top:10px;
+  font-size:15px;
+  margin-top: 5%;
+  margin-left:43%;
+  width: 200px;
+  height: 30px;
+  border: 3px solid #ffffff;
+  text-align: center;
+    transform: perspective(200px) rotatey(-20deg);
+}
+.box1:hover
+{
+  background-color: #ddd;
+}
+.box2:hover
+{
+  background-color: #ddd;
+}
+
+.box2{
+  padding-top:10px;
+  font-size:15px;
+  margin-top: 2%;
+  margin-left:39%;
+  width: 200px;
+  height: 30px;
+  border: 3px solid #ffffff;
+  text-align: center;
+    transform: perspective(200px) rotatey(20deg);
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
