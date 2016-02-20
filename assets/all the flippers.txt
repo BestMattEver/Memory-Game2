@@ -1,0 +1,72 @@
+<span class="flipper"><!-- the second flipper-->
+    <span class="card shuttle"><i class="fa fa-space-shuttle fa-4x"></i></span>
+</span>
+<span class="flipper"><!--etc...-->
+    <span class="card flask"><i class="fa fa-flask fa-4x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card bug"><i class="fa fa-bug fa-4x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card bomb"><i class="fa fa-bomb fa-4x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card eye"><i class="fa fa-eye fa-4x"></i></span>
+</span>
+
+<span class="flipper"><!--this is the first flipper-->
+    <span class="card bomb"><i class="fa fa-bomb fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card trans"><i class="fa fa-transgender-alt fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card anchor"><i class="fa fa-anchor fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card bug"><i class="fa fa-bug fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card spock"><i class="fa fa-hand-spock-o fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card anchor"><i class="fa fa-anchor fa-5x"></i></span>
+</span>
+
+<span class="flipper"><!--this is the first flipper-->
+    <span class="card" for="button12"><i class="fa fa-transgender-alt fa-5x"></i></span>
+</span><!-- the second flipper-->
+<span class="flipper">
+    <span class="card" for="button13"><i class="fa fa-pied-piper-alt fa-5x"></i></span>
+</span><!--etc...-->
+<span class="flipper">
+    <span class="card" for="button14"><i class="fa fa-eye fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button15"><i class="fa fa-pied-piper-alt fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button16"><i class="fa fa-flask fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button17"><i class="fa fa-hand-spock-o fa-5x"></i></span>
+</span>
+<!---=================================================================================-->
+<span class="flipper"><!--this is the first flipper-->
+    <span class="card" for="button12"><i class="fa fa-transgender-alt fa-5x"></i></span>
+</span><!-- the second flipper-->
+<span class="flipper">
+    <span class="card" for="button13"><i class="fa fa-pied-piper-alt fa-5x"></i></span>
+</span><!--etc...-->
+<span class="flipper">
+    <span class="card" for="button14"><i class="fa fa-eye fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button15"><i class="fa fa-pied-piper-alt fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button16"><i class="fa fa-flask fa-5x"></i></span>
+</span>
+<span class="flipper">
+    <span class="card" for="button17"><i class="fa fa-hand-spock-o fa-5x"></i></span>
+</span>

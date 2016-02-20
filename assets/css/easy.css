@@ -1,7 +1,16 @@
 body{
   background-color: #3F51B5;
-  width: 1000px;
+  /*width: 1000px;*/
   margin: 0 auto;
+}
+
+#gameZone{
+  width: 80%;
+  margin-left:11%;
+  margin-right:10%;
+  position:relative;
+  display: block;
+  background: rgb(0, 255, 156);
 }
 
 h1{
@@ -10,7 +19,7 @@ h1{
   color: #ffffff;
 }
 header {
-  margin-left: 33%;
+  margin-left: 26%;
   display: block;
 
 }
@@ -18,6 +27,7 @@ header.sub{
   display: inline;
   margin-left:5%;
   color: #ffffff;
+  display:none;
 }
 header.sub2{
   display: inline;
@@ -26,17 +36,67 @@ header.sub2{
   margin-right:10%;
   margin-bottom: 10px;
   color: #ffffff;
+  display:none;
 }
+#stripe{
+  position: absolute;
+  z-index: -1;
+  /*transform: rotateZ(155deg);*/
+  background: rgb(0, 255, 156);
+  width: 43%;
+  height: 900%;
+  overflow: hidden;
+  top:-30%;
+  left: 25%;
+}
+#question{
+  font-family: 'lato', helvetica, sans-serif;
+  margin-left: 35%;
+  margin-top: 3%;
+  color: #fff;
+}
+.check{
+  width:50px;
+  height:50px;
+  background: rgb(25, 142, 193);
+  border: 0px;
+  margin-left:20px;
+}
+#output{
+  text-align:center;
+}
+
+#numBoxes{
+  width: 180px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-left: 47px;
+  font-size: 1.3em;
+}
+
+#generate{
+  background: rgb(25, 142, 193);
+  width: 200px;
+  height: 80px;
+  color: #fff;
+  font-size: 2em;
+  border-radius: 5px;
+  text-align: center;
+  padding-top:20px;
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+#generate:hover{
+  background: #3F51B5;
+  color: #fff;
+  border: 2px solid rgb(25, 142, 193);
+}
+
+
 /* everything above this is just the header*/
 
 /*everything below is has to do with the flippy square.*/
 /*flippy*/
-input {
-  width: 150px;
-  height: 150px;
-  display: none;
-
-}
 
 .card {
   width: 150px;
@@ -44,6 +104,7 @@ input {
   background: steelblue;
   color: rgba(255,255,255,0);
   text-align: center;
+  float:left;
   display: inline-block;
   border-radius: 15px;
   padding-top:40px;
@@ -52,13 +113,23 @@ input {
   transition: background .5s, -webkit-transform .5s; color: .5s;
 }
 
-input:checked +.card{
+.cardOpen{
   background:rgb(0, 155, 221);
   color: rgba(255,255,255,1);
-  -webkit-transform: rotatez(180deg);
-  -webkit-transform: rotateX(180deg);
   -webkit-transform: rotatey(180deg);
 }
+
+.permOpen{
+  background:rgb(93, 219, 189);
+  color: rgba(255,255,255,1);
+  /*-webkit-transform: rotatey(180deg);*/
+}
+
+/*input:checked +.card{
+  background:rgb(0, 155, 221);
+  color: rgba(255,255,255,1);
+  -webkit-transform: rotatey(180deg);
+}*/
 /*end flippy*/
 
 .card:hover{
@@ -72,6 +143,6 @@ section.row{
   width: 1000px;
 }
 .flipper{
-  display: inline;
-  white-space:nowrap;
+  display: block;
+  /*white-space:nowrap;*/
 }
