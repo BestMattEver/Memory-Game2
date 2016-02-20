@@ -117,6 +117,7 @@ header.sub2{
   background:rgb(0, 155, 221);
   color: rgba(255,255,255,1);
   -webkit-transform: rotatey(180deg);
+  pointer-events: none; /*this makes it so clicks on this element dont throw events. very useful.*/
 }
 
 .permOpen{
