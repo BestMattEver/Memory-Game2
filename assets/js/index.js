@@ -6,11 +6,11 @@ var iconChoices = ["fa-glass", "fa-music", "fa-arrow-circle-o-down", "fa-search"
 var numBoxes = 0;//the number of boxes the user enters
 var iconsThisGame=[];//an array of the icons in use THIS game.
 var clickedNum =0; //this is how many times we've clicked a card
-var card1;
+var card1; //the first card we want to compare.
 
-$("#generate").on("click", function(){
+$("#generate").on("click", function(){//This function/listener combo generates the board
 numBoxes = parseInt($("#numBoxes").val());
-console.log(numBoxes);
+//console.log(numBoxes);
 
  if(numBoxes%2 != 0)//it the player enters an odd number, add one to it, call him a smart ass, and make the board anyway.
 {
@@ -18,9 +18,46 @@ console.log(numBoxes);
   numBoxes+=1;
 }//end if
 
+for(var k=-2; k <= (numBoxes); k=k+1)//this for loop selects icons to be used THIS GAME.
+{
+  var icon = iconChoices[Math.floor(Math.random() * (200- 0 + 1)) + 0];//gets a random icon from the big icon array.
+  if(iconsThisGame.indexOf(icon) === -1)//this if makes sure the same icon isnt put into the array twice.
+  {
+    iconsThisGame[k] = icon;
+    iconsThisGame[k+1] = icon;//we put two of the same icon in because when we put them in the game, we're going to to splice them out. so we need as many as we're going to need for the game.
+  }
+  else
+  {
+    console.log("fuck you.");
+    k=k-2;
+  }//it tried to grab the same icon twice.
+}//end for loop
+
+if(iconsThisGame.length > numBoxes)
+{
+  console.log("IM BIGGER THAN I SHOULD BE!");
+  iconsThisGame.splice(numBoxes, (iconsThisGame.length - numBoxes));
+}
+
+
+for(var p=0; p < iconsThisGame.length; p++)//this for loop is just for debugging purposes.
+{
+  console.log(iconsThisGame[p]);
+}
+console.log(iconsThisGame);//debug. prints out the whole array of icons used this game.
+console.log("icons this game: " + iconsThisGame.length);
+
 for(var i = 0;i<=numBoxes-1;i++)//make the board.
 {
-  $("#gameZone").append("<span class='flipper'><span class='card'><i class='fa " + iconChoices[Math.floor(Math.random() * (200 - 0 + 1)) + 0] + " fa-4x'></i></span></span>");
+  var idx = Math.floor(Math.random() * (iconsThisGame.length - 0 + 1)) + 0 //this generates a random number that is between 0 and the length of the iconsThisGame array.
+  var curcon = iconsThisGame[idx];
+  console.log("iconsThisGame was: " + iconsThisGame.length);
+  iconsThisGame.splice(idx, 1);//removes the icon that's going into a card from the iconsThisGame, so it cant be picked again.
+  console.log("and became: " + iconsThisGame.length);
+
+
+//the following code injects HTML into the page for each card the player wanted.
+  $("#gameZone").append("<span class='flipper'><span class='card'><i class='fa " + curcon + " fa-4x'></i></span></span>");
   $("#question").css("display", "none");
 }
 
@@ -29,30 +66,32 @@ for(var i = 0;i<=numBoxes-1;i++)//make the board.
 
   $("#gameZone").on("click", ".card", function(){
 
-    clickedNum++
-    if(clickedNum >= 3)
-    {
-      if(((clickedNum-3)%2===0))
-      {
-        $(".card").removeClass("cardOpen");
-      }
-      else if(clickedNum===3)
-      {
-        $(".card").removeClass("cardOpen");
-      }
-    }
+     $(this).toggleClass("cardOpen"); //this is wrong but good for debugging.
 
-    $(this).addClass("cardOpen");
-    console.log($(this));
+//what's below works as the game ought to work, but its really annoying for debugging purposes.
+    // clickedNum++
+    // if(clickedNum >= 3)
+    // {
+    //   if(((clickedNum-3)%2===0))
+    //   {
+    //     $(".card").removeClass("cardOpen");
+    //   }
+    //   else if(clickedNum===3)
+    //   {
+    //     $(".card").removeClass("cardOpen");
+    //   }
+    // }
+    // $(this).addClass("cardOpen");
+    // console.log($(this));
 
 
   });//end card click
 
 //this cute little function just prints whatever I'm clicking to the screen.
 //helpful for figuring out which divs are where.
-$("*").on("click",function(){
-  console.log($(this));
-});
+// $("*").on("click",function(){
+//   console.log($(this));
+// });
 
 
 
