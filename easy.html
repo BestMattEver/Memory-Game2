@@ -9,14 +9,23 @@
   <title>Memory Game 2.0</title>
 </head>
   <body>
-    <!-- <audio src="http://www.gamemusicthemes.com/sheetmusic/supernintendo/streetfighterii/guilestage/Street_Fighter_II_-_Guile_Stage_by_Gori_Fater.mp3" autoplay=""></audio> -->
+
+
+<div id="modalBG">
+  <div class="modalArea"><div id="playAgain">Play Again?</div></div>
+</div>
+
     <!--this is where the header and sub headers go (hearts and timer)-->
     <header>
       <h1>Mem<i class="fa fa-lightbulb-o fa-2x"></i>ry&nbsp;&nbsp;v2.0</h1>
     </header>
-    <header class="sub"><i class="fa fa-heart-o"></i>&nbsp;<i class="fa fa-heart-o"></i>&nbsp;<i class="fa fa-heart-o"></i>&nbsp;<i class="fa fa-heart-o"></i>&nbsp;<i class="fa fa-heart-o"></i>&nbsp;<i class="fa fa-heart-o"></i>
+    <header class="hearts">
+      <!--this is where the hearts go  <i class="fa fa-heart-o"></i>   -->
     </header>
-    <header class="sub2">2:10</header>
+
+    <header class="time">
+      <!--this is where the timer goes-->00:00:00
+    </header>
     <!--done with header -->
     <br><br><br>
   <span id="stripe"></span>
@@ -26,12 +35,7 @@
     <input type="text" id="numBoxes" placeholder="How many boxes?"></input>
     <div id="generate">Play</div>
     <br><br>
-    <!-- <input type="checkbox" class="check" id="sounds">Sounds?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check" id="music">Music? -->
-    <br>
-      <!-- <radio id="easy" label ="Easy" group="diff"/> -->
-      <!-- <radio id="hard" label = "Hard" group="diff"/> -->
-
-  </div>
+  </div><!--end question div-->
 
     <br><br><br><br>
 
@@ -39,10 +43,10 @@
 
     </section><!--end gameZone-->
 
-    <!-- <span class="flipper"> -->
+    <!-- <span class="flipper"> this card just works.-->
         <!-- <span class="card shuttle"><i class="fa fa-space-shuttle fa-4x"></i></span> -->
     <!-- </span> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
-  </body>
+</body>
 </html>

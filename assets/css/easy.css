@@ -3,7 +3,6 @@ body{
   /*width: 1000px;*/
   margin: 0 auto;
 }
-
 #gameZone{
   width: 80%;
   margin-left:11%;
@@ -12,7 +11,47 @@ body{
   display: block;
   background: rgb(0, 255, 156);
 }
+.grayArea{
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position:fixed;
+  display: block;
+}
+#modalBG{
+  z-index: 5;
+  display: none;
+  padding-top: 10%;
+  padding-left: 11%;
 
+}
+#modalArea{
+  display: none;
+}
+.win{
+  padding-top: 4%;
+  width: 70%;
+  height: 65%;
+  color: rgba(255,255,255,1);
+  display:block;
+  background: rgb(73, 255, 200);
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius:15px;
+}
+.lose{
+  padding-top: 4%;
+  width: 70%;
+  height: 65%;
+  color: #fff;
+  display:block;
+  background: rgba(215, 101, 101, 1);
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius:15px;
+}
 h1{
   font-family: 'Orbitron', sans-serif;
   font-size: 63px;
@@ -21,34 +60,34 @@ h1{
 header {
   margin-left: 26%;
   display: block;
-
 }
-header.sub{
-  display: inline;
-  margin-left:5%;
-  color: #ffffff;
-  display:none;
+header.time{
+  background-color: #3F51B5;
+  color:#fff;
+  position: fixed;
+  top:20%;
+  left: -25%;
 }
-header.sub2{
-  display: inline;
-  float: right;
-  font-family: sans-serif;
-  margin-right:10%;
-  margin-bottom: 10px;
-  color: #ffffff;
-  display:none;
+header.hearts{
+  background-color: #3F51B5;
+  color: #fff;
+  position: fixed;
+  width: 50px;
+  top:20%;
+  margin-left: 90%;
 }
 #stripe{
   position: absolute;
   z-index: -1;
   /*transform: rotateZ(155deg);*/
-  background: rgb(0, 255, 156);
+  background: rgb(113, 194, 194);
   width: 43%;
   height: 900%;
   overflow: hidden;
   top:-30%;
   left: 25%;
 }
+/*this starts the question area css==================*/
 #question{
   font-family: 'lato', helvetica, sans-serif;
   margin-left: 35%;
@@ -92,11 +131,7 @@ header.sub2{
   border: 2px solid rgb(25, 142, 193);
 }
 
-
-/* everything above this is just the header*/
-
 /*everything below is has to do with the flippy square.*/
-/*flippy*/
 
 .card {
   width: 150px;
@@ -125,25 +160,23 @@ header.sub2{
   color: rgba(255,255,255,1);
   /*-webkit-transform: rotatey(180deg);*/
 }
-
 /*input:checked +.card{
   background:rgb(0, 155, 221);
   color: rgba(255,255,255,1);
   -webkit-transform: rotatey(180deg);
 }*/
-/*end flippy*/
-
 .card:hover{
   background: rgb(148, 186, 203);
 }
+.flipper{
+  display: block;
+  /*white-space:nowrap;*/
+}
+/*end flippy*/
 
 section.row{
   display: block;
   margin-top: 4px;
   margin-left: 25px;
   width: 1000px;
-}
-.flipper{
-  display: block;
-  /*white-space:nowrap;*/
 }
