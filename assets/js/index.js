@@ -9,12 +9,18 @@ var iconsThisGame2=[];
 var clickedNum =0; //this is how many times we've clicked a card
 var card1; //the first card we want to compare.
 var won = true;
-
+var time =0;
 
 
 $("#generate").on("click", function(){//This function/listener combo generates the board
 numBoxes = parseInt($("#numBoxes").val());
 //console.log(numBoxes);
+
+//START THE TIMER! this should use a counter to add miiliseconds and display them on the screen.
+var stopper = setInterval(function(){
+  time+=1;
+  $(".time").text((time/100));
+},1);
 
 
  if(numBoxes%2 != 0)//it the player enters an odd number, add one to it, call him a smart ass, and make the board anyway.
@@ -80,7 +86,7 @@ for(var i = 1;i<=numBoxes;i++)//make the board.
 //this bit of code sets up the hearts.
 numHearts = (numBoxes/2)+1; //this apparently is the known number of hearts for an easy version of memory.
 console.log("numhearts = " + numHearts);
-for(var y =0; y<numHearts; y++);//this sets up the hearts initially.
+for(var y =1; y <= numHearts; y++);//this sets up the hearts initially.
 {
   console.log("initial heart draw " + y);
   $(".hearts").append("<i class='fa fa-heart'></i>");
@@ -116,14 +122,15 @@ for(var y =0; y<numHearts; y++);//this sets up the hearts initially.
             $(".modalArea").addClass("lose");
             $(".modalArea").css("display", "block");
 
-            $(".modalArea").html("<h1>You've lost...</h1><br><br> It took you:<br><br> TIME <br><br> to lose all your hearts.");
+            $(".modalArea").html("<h1>You've lost...</h1><br><br> It took you:<br><br>" + time/100 + "<br><br> to lose all your hearts.");
+            clearInterval(stopper);
           }
           else
           {
             //this bit of code draws the hearts.
             $("hearts").html("");//
-            for(var x=0;x===numHearts; x++);
-            {
+            for(var x = 0; x <= numHearts; x++);
+            {console.log("in the heart update: numhearts = " + numHearts);
               $(".hearts").append("<i class='fa fa-heart'></i>");
             }//end heart draw for
 
@@ -146,7 +153,8 @@ for(var y =0; y<numHearts; y++);//this sets up the hearts initially.
             $(".modalArea").addClass("win");
             $(".modalArea").css("display", "block");
 
-            $(".modalArea").html("<h1>YOU'VE WON!</h1><br><br> you did it in:<br><br> TIME <br><br> and had <br><br>" + numHearts + "<br><br> hearts to spare!");
+            $(".modalArea").html("<h1>YOU'VE WON!</h1><br><br> you did it in:<br><br>" + time/100 +"<br><br> and had <br><br>" + numHearts + "<br><br> hearts to spare!");
+            clearInterval(stopper);
           }
         }
     }//end else (every even click)
@@ -176,6 +184,9 @@ for(var y =0; y<numHearts; y++);//this sets up the hearts initially.
 // $("*").on("click",function(){
 //   console.log($(this));
 // });
+
+
+
 
 
 
